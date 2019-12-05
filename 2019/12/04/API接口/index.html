@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Vivi">
     
     
     
     
     
     
-    <title>myFirstBlog | Hexo</title>
-    <link href="http://yoursite.com" rel="prefetch" />
+    <title>API接口(DOM和BOM) | 发呆的薇薇</title>
+    <link href="http://vivi-design.github.io" rel="prefetch" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/aos.css">
@@ -66,7 +66,7 @@
                     aria-expanded="false">
                 <span class="fa fa-lg fa-reorder"></span>
             </button>
-            <a href="http://yoursite.com">
+            <a href="http://vivi-design.github.io">
                 
                 <style>
                     #gal-header .navbar-brand {
@@ -79,7 +79,7 @@
                     }
                 </style>
                 <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">Hexo</div>
+                <div class="navbar-brand">发呆的薇薇</div>
                 
             </a>
         </div>
@@ -142,21 +142,21 @@
 <article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
-        <a href="http://yoursite.com">Hexo</a>
+        <a href="http://vivi-design.github.io">发呆的薇薇</a>
         >
-        <span>myFirstBlog</span>
+        <span>API接口(DOM和BOM)</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2019/12/02/myFirstBlog/">myFirstBlog</a>
+                <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2019-12-02
+                <i class="fa fa-calendar"></i> 2019-12-04
             </span>
             
         </div>
@@ -166,11 +166,11 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2019/12/02/myFirstBlog/">myFirstBlog</a>
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2019-12-02
+                <i class="fa fa-calendar"></i> 2019-12-04
             </p>
             <p>
                 
@@ -179,16 +179,40 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><ul>
-<li>1</li>
-</ul>
+        <h1 id="Web-API-和JS基础关联性"><a href="#Web-API-和JS基础关联性" class="headerlink" title="Web API 和JS基础关联性"></a>Web API 和JS基础关联性</h1><p><strong><font size="4">1.JS的组成</font></strong> </p>
+<p><img src="./JS_form.png" alt="alt 属性文本"></p>
+<p><strong><font size="4">2.JS基础以及Web API</font></strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; JS基础：主要是ECMAScript 标准规定的基本语法</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Web API：是w3c组织的标准， 主要是DOM和BOM, 是JS所独有的部分</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;JS基础学习ECMAScript基础语法为后面作铺垫，Web APIs是JS的应用，通过使用JS基础语法实现页面的交互效果</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;MDN详细API: <strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API</a></strong></p>
+<p><strong><font size="6">一：DOM</strong></p>
+<p><strong><font size="4">1. DOM简介</font></strong></p>
+<p><strong>1.1 DOM</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;文档对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展置标语言(HTML或者XML)的标准编程接口。</p>
+<p><strong>1.2 DOM树</strong></p>
+<p><img src="./dom_tree.png" alt="alt 属性文本"></p>
 <ul>
-<li>2</li>
+<li>文档：一个页面就是一个文档，DOM中用document表示</li>
+<li>元素：页面中所有标签都是元素，DOM中用element表示</li>
+<li>节点：网页中所有内容都是节点（标签、属性、文本、注释等），DOM中用node表示</li>
 </ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;DOM把以上内容都看作是对象</p>
+<p><strong><font size="4">2. 获取元素</font></strong></p>
+<p><strong>2.1 获取页面中元素方法</strong></p>
 <ul>
-<li>3<br>hello world</li>
+<li>根据ID获取</li>
+<li>根据标签获取</li>
+<li>通过HTML5新增的方法获取</li>
+<li>特殊元素获取</li>
 </ul>
-<hr>
+<p><strong>2.2根据ID获取</strong><br><strong>Element. getElementById(‘ID名’)；</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;使用getElementById()方法可以获取带有ID的元素对象</p>
+<p><strong>2.3根据标签名获取</strong><br><strong>Element.getElementsByTagName(‘标签名’);</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;获取过来的是，元素对象的集合，以伪数组的形式存储的；还可以获取某个元素（父元素）内部所有指定标签名的子元素，注意：父元素必须是单个对象（必须指明是哪一个元素对象），获取的时候不包括父元素自己</p>
+<p><strong>2.4通过HTML5新增的方法获取</strong><br><strong>document.getElementByClassName(‘类名’);</strong>  //根据类名返回元素对象集合<br><strong>document.querySelector(‘选择器’);</strong>     //根据指定选择器返回第一个元素对象<br><strong>document.querySelectorAll(‘选择器’);</strong>   //根据指定选择器返回所有元素对象</p>
+<p><strong>2.5获取特殊元素（body、html）</strong><br>&nbsp;获取body元素对象：<strong>document.body</strong><br>&nbsp;获取html元素：<strong>document.documentElement</strong></p>
+<p><strong><font size="4">3.常见的鼠标事件</font></strong><br><img src="./mouseevent.png" alt="alt 属性文本"><br>执行事件的步骤：获取事件源——注册事件（绑定事件）——添加事件处理程序（采取函数赋值形式）</p>
+<p><strong><font size="4">4.操作元素</font></strong></p>
+<p><strong>4.1 改变元素内容</strong><br><strong>element.innerText</strong><br>从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉<br><strong>element.innerHTML</strong><br>起始位置到终止位置的全部内容，包括html标签，同时保留空客和换行</p>
 
     </div>
 </article>
@@ -212,7 +236,7 @@
     <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
         <div class="panel-heading" style="text-align: center">
             <i class="fa fa-quote-left"></i>
-            John Doe
+            Vivi
             <i class="fa fa-quote-right"></i>
         </div>
         <div class="author-panel text-center">
@@ -250,7 +274,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/12/02/myFirstBlog/">myFirstBlog</a>
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/">html总结</a>
                 </span>
             </li>
             
@@ -278,13 +308,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/12/02/myFirstBlog/">myFirstBlog</a>
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/12/02/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/">html总结</a>
                 </span>
             </li>
             
@@ -299,17 +335,17 @@
 
                 
                 <li>
-                    <a href="/2019/12/02/myFirstBlog/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2019/12/02/myFirstBlog/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2019/12/02/myFirstBlog/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -363,7 +399,7 @@
     </div>
     <footer id="gal-footer">
     <div class="container">
-        Copyright © 2018 John Doe Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+        Copyright © 2018 Vivi Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
     </div>
 </footer>
 

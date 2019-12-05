@@ -10,7 +10,7 @@
     
     
     
-    <title>archive_a | 发呆的薇薇</title>
+    <title>html总结 | 发呆的薇薇</title>
     <link href="http://vivi-design.github.io" rel="prefetch" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -95,7 +95,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -138,19 +138,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://vivi-design.github.io">发呆的薇薇</a>
         >
-        <span>归档</span>
+        <span>html总结</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/">html总结</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-12-02
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -158,35 +166,57 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/">html总结</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-12-02
+            </p>
+            <p>
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2019年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
-                        <br>
-            
-             
-                        <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/">html总结</a>
-                        <br>
-            
-             
-                        <a href="/2019/12/02/hello-world/">Hello World</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <h1 id="HTML总结笔记-一"><a href="#HTML总结笔记-一" class="headerlink" title="HTML总结笔记(一)"></a>HTML总结笔记(一)</h1><h2 id="一、网页的原理："><a href="#一、网页的原理：" class="headerlink" title="一、网页的原理："></a>一、网页的原理：</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;用户输入某个网址之后，对应的服务器发现用户请求该网页，就会将该网页相关的所有文件（图片文件、JS文件、CSS文件、flash文件等）<strong>通过HTTP协议（hypertext transfer protocol超文本传输协议）</strong>传输到用户的电脑里面的一个<strong>临时文件夹</strong>（对应浏览器有自己的临时文件夹位置）中，HTML页面在用户自己的电脑上进行渲染，此时用户即可在浏览器看到对应页面的效果,每一个网址，都对应了服务器上面的确定的文件。<br><strong>纯文本文件：</strong>只有内容，没有样式。常见的纯文本文件有：.txt.html.js.css.java。更深层次可以理解为没有语义，内部所有文字不存在任何代码语义。</p>
+<hr>
+<h2 id="二、HTML"><a href="#二、HTML" class="headerlink" title="二、HTML"></a>二、HTML</h2><p><font face="黑体">HTML：hypertext markup language</font>超文本标记语言。就是通过标签对，给纯文本增加语义。即用文本给文本增加语义，就叫做“超文本”，而存在标签对，所以就是“超文本标记语言”，html中除了语义其他什么都没有。</p>
+<hr>
+<h2 id="三、sublime"><a href="#三、sublime" class="headerlink" title="三、sublime"></a>三、sublime</h2><p>tips： 做网页和用什么软件没有任何关系，sublime非常快、方便、小巧、插件多。所以我们选择使用这个编辑器<br>sublime中常用快捷键：</p>
+<p>ctrl+n：新建文件   ctrl+滚轮：调整字号    ctrl+shift+↑：上移当前行 </p>
+<p>ctrl+shift+d：复制当前行  ctrl+shift+k：删除当前行</p>
+<hr>
+<h2 id="四、HTML文档基本骨架"><a href="#四、HTML文档基本骨架" class="headerlink" title="四、HTML文档基本骨架"></a>四、HTML文档基本骨架</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC&quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Transitional&#x2F;&#x2F;EN&quot;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-transitional.dtd&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;htmlxmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;1999&#x2F;xhtml&quot; xml:lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv&#x3D;&quot;Content-Type&quot;content&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot;&gt;  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&lt;title&gt;Document&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+<h6 id="4-1-文档声明头"><a href="#4-1-文档声明头" class="headerlink" title="4.1 文档声明头"></a>4.1 文档声明头</h6><p><strong><!DOCTYPE ...... />  DocType Declaration：用于声明该文档使用何种规范(HTML/XHTML)</strong></p>
+<p>HTML4.01里面有两大种规范，每大种规范里面又各有3种小规范。所以一共6种规范.</p>
+<p>sublime输入的html:xt  x表示XHTML，t表示transitional</p>
+<p>HTML5中极大的简化了DTD，也就是说HTML5中就没有XHTML了（W3C自己打脸了）：<!DOCTYPE html></p>
+<h6 id="4-2-字符集"><a href="#4-2-字符集" class="headerlink" title="4.2 字符集"></a>4.2 字符集</h6><p>字符集用meta标签定义，meta表示“元”。“元”配置，就是表示基本的配置项目。</p>
+<p>charset就是charactor set“字符集”的意思。中文能够使用的字符集有两种：</p>
+<p><strong>UTF-8和gbk,sublime默认utf-8</strong></p>
+<p><strong>注意:我们用meta标签可以声明当前这个html文档的字库，但是一定要和保存的类型一样，否则乱码！</strong></p>
+<p>当我们不设置的时候，sublime默认类型就是UTF-8。而一旦更改为gb2312的时候，就一定要记得设置一下sublime的保存类型：文件→ set File Encoding to →Chinese Simplified(GBK)</p>
+<p>UTF-8里面存储一个汉字3个字节。而gb2312中存储一个汉字2个字节。</p>
+<p>UTF-8 字多，有各种国家的语言，但是保存尺寸大，文件臃肿；</p>
+<p>gb2312字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。</p>
+<p>浏览器就是通过meta来看你是什么字符集的，比如你保存的时候meta写的，和声明的不匹配，那么浏览器就是乱码。</p>
+<h6 id="4-3-关键字和页面描述"><a href="#4-3-关键字和页面描述" class="headerlink" title="4.3 关键字和页面描述"></a>4.3 关键字和页面描述</h6><meta name="Description"  content=“xxxx” />
+
+<p>只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，<strong>这个技术叫做SEO，search engine optimization，搜索引擎优化。</strong></p>
+<meta name="Keywords"  content=“xxxx” />
+
+<p>这些关键词，就是告诉搜索引擎，这个网页是干嘛的，能够提高搜索命中率。让别人能够找到你，搜索到你。Keywords就是“关键词”的意思。</p>
+<h6 id="4-4-title标签"><a href="#4-4-title标签" class="headerlink" title="4.4 title标签"></a>4.4 title标签</h6><title>网页的标题</title>
+
+<p>title也是有助于SEO搜索引擎优化的：</p>
+<h2 id="五、HTML的基本语法特性"><a href="#五、HTML的基本语法特性" class="headerlink" title="五、HTML的基本语法特性"></a>五、HTML的基本语法特性</h2><h6 id="5-1-html对换行不敏感，对tab不敏感"><a href="#5-1-html对换行不敏感，对tab不敏感" class="headerlink" title="5.1 html对换行不敏感，对tab不敏感"></a>5.1 html对换行不敏感，对tab不敏感</h6><p>HTML不是依靠缩进来表示嵌套的，就是看标签的包裹关系。但是，我们发现有良好的缩进，代码更易读。要求大家都正确缩进标签。</p>
+<p><img src="./1.png" alt="alt 属性文本" title="1"></p>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -304,17 +334,17 @@
 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
