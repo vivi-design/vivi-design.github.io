@@ -213,6 +213,30 @@
 <p><strong><font size="4">3.常见的鼠标事件</font></strong><br><img src="./mouseevent.png" alt="alt 属性文本"><br>执行事件的步骤：获取事件源——注册事件（绑定事件）——添加事件处理程序（采取函数赋值形式）</p>
 <p><strong><font size="4">4.操作元素</font></strong></p>
 <p><strong>4.1 改变元素内容</strong><br><strong>element.innerText</strong><br>从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉<br><strong>element.innerHTML</strong><br>起始位置到终止位置的全部内容，包括html标签，同时保留空客和换行</p>
+<p><strong>4.2 常用元素的属性操作</strong><br>1.innerText 、innerHTML 改变元素内容<br>2.src 、href<br>3.id 、alt 、title<br><img src="./inner.png" alt="alt 属性文本"></p>
+<p><strong>4.3 表单元素的属性操作</strong><br>利用DOM可以操作这些元素的属性：type 、value 、checked 、selected 、disabled</p>
+<p><strong>4.4 样式属性操作</strong><br>通过JS修改元素的大小、颜色、位置等样式<br><strong>1.element.style</strong> //行内样式操作<br><strong>2.element.className</strong> //类名样式操作</p>
+<p>操作元素是DOM核心内容<br><img src="./cont.png" alt="alt 属性文本"></p>
+<p><strong>4.5 排他思想</strong><br>如果有一组元素，需要某一个元素实现某种样式，就需要用到循环的排他思想算法：<br><img src="./button.png" alt="alt 属性文本"></p>
+<p><strong>4.6 自定义属性的操作</strong><br><strong>1.获取属性值</strong><br><strong>element.属性 //获取内置属性值</strong>（元素本身自带的属性）<br><strong>element.getAttribute(‘属性’);</strong> //主要获得自定义的属性（标准） 自己定义的属性</p>
+<p><strong>5.节点操作</strong><br>5.1 节点至少拥有nodeType(节点类型)、nodeName（节点名称）和nodeValue（节点值）<br>5.2 节点层级：常见的是父子兄层级关系<br>   <strong>1.父级节点</strong><br>      <strong>node.parentNode</strong> //返回最近的一个父节点（没有则返回null）</p>
+<ul>
+<li><strong>2.子节点</strong> </li>
+<li><strong>2.1 parentNode.childNodes(标准)</strong><br>返回包含指定节点的子节点集合，返回值里面包含了所有的子节点，包括元素节点，文本节点</li>
+<li><strong>2.2 parentNode.children(非标准)</strong><br>是一个只读属性，返回所有的子元素节点，它只返回子元素节点，其余节点不返回（常用，重点掌握）</li>
+<li><strong>2.3  parentNode.firstChild</strong>   返回第一个子节点，找不到则返回null  同样，包含所有的节点</li>
+<li><strong>2.4 parentNode.lastChild</strong>   返回最后一个子节点，找不到则返回null 同样，包含所有的节点</li>
+<li><strong>2.5 parentNode.firstElementChild</strong>   返回第一个子元素节点，找不到则返回null</li>
+<li><strong>2.6 parentNode.lastElementChild</strong>  返回最后一个子元素节点，找不到则返回null<br><font color= "red">这两个方法存在兼容，IE9以上才支持</font></li>
+</ul>
+<ul>
+<li><strong>3.兄弟节点</strong></li>
+<li><strong>3.1 node.nextSibling</strong>   返回当前元素的下一个兄弟节点，找不到则返回null，同样，包含所有的节点</li>
+<li><strong>3.2 node.previousSibling</strong>  返回当前元素上一个兄弟节点，找不到则返回null, 同样，包含所有的节点</li>
+<li><strong>3.3 node.nextElementSibling</strong>  返回当前元素下一个兄弟元素节点，找不到则返回null</li>
+<li><strong>3.4 node.previousElementSibling</strong> 返回当前元素上一个兄弟节点，找不到则返回null<br><font color= "red">这两个方法存在兼容，IE9以上才支持</font></li>
+</ul>
+<p>解决兼容性：封装一个兼容性的函数<br><img src="./flag.png" alt="alt 属性文本"></p>
 
     </div>
 </article>
@@ -274,6 +298,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2019/12/08/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/">移动端常用的插件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
                 </span>
             </li>
@@ -308,19 +338,25 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2019/12/02/hello-world/">Hello World</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2019/12/04/API%E6%8E%A5%E5%8F%A3/">API接口(DOM和BOM)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2019/12/02/html%E6%80%BB%E7%BB%93/">html总结</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/12/08/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/">移动端常用的插件</a>
                 </span>
             </li>
             
